@@ -3,14 +3,14 @@ Welcome to Week 1 of the 90 Days of DevOps
 
 ## Tasks
 
-### 1. **Understand OSI & TCP/IP Models**
+## 1. **Understand OSI & TCP/IP Models**
 
-## What is the OSI Model?
+### What is the OSI Model?
 - The OSI (Open Systems Interconnection)was developed by the International Organization for Standardization (ISO).
 - It is a set of rules that explains how different computer systems communicate with each other over a network. 
 - The OSI Model consists of 7 layers and each layer has specific functions and responsibilities.
 
-## Layers of OSI Model:
+### Layers of OSI Model:
 
 **Application Layer (Layer 7)**
   - Interface for end-user applications to communicate over a network. This is the only layer that directly interacts with data from the user.
@@ -63,3 +63,100 @@ Welcome to Week 1 of the 90 Days of DevOps
   - **Example:**
     - Fiber Optic Cables: Used for high-speed internet.
     - Wi-Fi Signals: Wireless connectivity.
+
+**-------------------------------------------------------------------------------------------------------------------------------------------------**
+
+### What is the TCP/IP Model?
+- TCP/IP stands for Transmission Control Protocol/Internet Protocol, which are the core protocols of the Internet.
+- It is a set of protocols that define how data should be transmitted over a network by ensuring reliable communication between devices.
+- It consists of four layers: the Link Layer, the Internet Layer, the Transport Layer, and the Application Layer.
+
+### Layers of TCP/IP Model:
+
+**Application Layer (Layer 4)**
+  - The Application Layer in the TCP/IP model combines the functions of three layers from the OSI model: the Application, Presentation, and Session layers.
+  - Deals with application-level protocols like HTTP, FTP, SMTP, and DNS, directly enabling communication between networked applications.
+  - **Example:**
+    - HTTP/HTTPS: Web browsing.
+    - DNS: Resolving domain names to IP addresses.
+
+**Transport Layer (Layer 3)**
+  - Corresponds to the OSI's Transport layer.
+  - Provides end-to-end communication, ensuring reliable data delivery with protocols like TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
+  - **Example:**
+    - TCP: Downloading a file.
+    - UDP: Watching a YouTube video.
+  
+**Network or Internet Layer (Layer 2)**
+  - Corresponds to the OSI's Network layer.
+  - Responsible for logical addressing and routing of data across networks using protocols like IP (Internet Protocol).
+  - **Example:**
+    -  IP: Assigning unique addresses to devices.
+    - ICMP: Checking network connectivity.
+   
+**Network Access Layer or Link Layer (Layer 1)**
+  - Combines the functions of OSI's Physical and Data Link layers.
+  - Deals with the physical connection and data transfer over network hardware (e.g., Ethernet).
+  - **Example:**
+    - Ethernet & Wi-Fi: Connecting to a network.
+    - MAC Address Filtering: Restricting network access.
+   
+**-------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+## 2. **Protocols and Ports for DevOps**
+Networking Protocols and Ports enable communication between systems, ensure secure data transmission, and facilitate automation.
+
+**Hypertext Transfer Protocol (HTTP)**
+    - used to transfer data over the web, web communication, transferring web pages, and REST API interactions.
+    **Port** 80 (Port 80 is the default port for HTTP traffic.)
+    **Example:*
+        - Enables CI/CD pipelines to interact with web applications.
+        - Used for monitoring services and fetching build artifacts.
+
+**Hypertext Transfer Protocol Secure (HTTPS)**
+    - Secure version of HTTP that encrypts communication using SSL/TLS.
+    **Port:** 443
+    **Example:*
+        - Ensures secure API interactions.
+        - Critical for deploying applications securely over the web
+
+**File Transfer Protocol (FTP)**
+    - FTP is used to transfer files between systems over a network.
+    **Port:** 21
+    **Example:*
+        - Used for automating file transfers in legacy systems.
+        - Sometimes used for deploying artifacts in non-cloud environments.
+
+**Secure Shell (SSH)**
+    - SSH is used to provide secure remote access to systems.
+    **Port:** 22
+    **Example:*
+        - Essential for automating deployments and managing infrastructure.
+        - Used in remote server administration and configuration management.
+
+**Domain Name System (DNS)**
+    - resolves and translates domain names into IP addresses
+    **Port:** 53
+    **Example:*
+        - Used in service discovery for microservices.
+        - Helps automate DNS configurations in infrastructure-as-code setups.
+
+**Simple Mail Transfer Protocol (SMTP)**
+    - Sends emails between mail servers.
+    **Port:** 25
+    **Example:*
+        - Used for sending automated notifications and alerts from CI/CD pipelines.
+
+**Lightweight Directory Access Protocol (LDAP)**
+    - Manages and accesses directory information.
+    **Port:** 389 (unencrypted), 636 (SSL/TLS encrypted)
+    **Example:*
+        - Used for authentication and access control in DevOps pipelines.
+
+**Network Time Protocol (NTP)**
+    - Synchronizes system clocks.
+    **Port:** 123
+    **Example:*
+        - Ensures time consistency across distributed systems and logs.
+
+**-------------------------------------------------------------------------------------------------------------------------------------------------------**
